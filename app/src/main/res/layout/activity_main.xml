@@ -1,45 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.vinny.vptablayout.MainActivity">
+    android:orientation="vertical">
 
-    <android.support.design.widget.TabLayout
-        android:id="@+id/taglayout"
+    <LinearLayout
+        android:id="@+id/home_fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="#ffff00"
-        app:tabBackground="@drawable/selector_tab"
-        app:tabIndicatorColor="@color/colorAccent"
-        app:tabIndicatorHeight="2dp"
-        app:tabMode="scrollable"
-        app:tabSelectedTextColor="#CC33FF"
-        app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
-        app:tabTextColor="@color/colorGray" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"></LinearLayout>
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager"
+    <View
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="1dp"
+        android:background="@color/app_bg_color"/>
 
+    <LinearLayout
+        android:id="@+id/tab_container"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#eeeeee"
+        android:orientation="horizontal">
 
-    <!--<android.support.design.widget.TabLayout-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content">-->
+        <LinearLayout
+            android:id="@+id/tab_home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
 
-    <!--<android.support.design.widget.TabItem-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="Tab1" />-->
+            <ImageView
+                android:id="@+id/img_tab_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/selector_tab_home"/>
 
-    <!--<android.support.design.widget.TabItem-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="Tab2" />-->
-    <!--</android.support.design.widget.TabLayout>-->
+            <TextView
+                android:id="@+id/tv_tab_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="首页"
+                android:textSize="14sp"
+                android:textColor="@color/gray"/>
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_hot"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_tab_hot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/selector_tab_invest"/>
+
+            <TextView
+                android:id="@+id/tv_tab_hot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="热门"
+                android:textSize="14sp"
+                android:textColor="@color/gray"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_mine"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_tab_mine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/selector_tab_evaluation"/>
+
+            <TextView
+                android:id="@+id/tv_tab_mine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的"
+                android:textSize="14sp"
+                android:textColor="@color/gray"/>
+
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>
