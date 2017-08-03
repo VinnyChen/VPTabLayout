@@ -113,15 +113,10 @@ compile 'com.android.support:design:25.3.1'
         android:text="Tab2" />
     ...
 </android.support.design.widget.TabLayout>
-## 方式三：结合ViewPager后使用（见上面ViewPager+TabLayout结合处）
-
-# 如何与ViewPager结合使用
-
-在FragmentPageAdapter中重写getPageTitle方法，根据position确认对应位置tab的文字显示
+## 方式三：结合ViewPager后使用（见上面ViewPager+TabLayout结合处）   
     
-    
-   ## tabLayout.setupWithViewPager(viewPager);
-   绑定ViewPager与TabLayout
+## tabLayout.setupWithViewPager(viewPager);
+绑定ViewPager与TabLayout
    
-   ## tablayout.getTabAt(position).select();
-   默认选择position位置的项
+## tablayout.getTabAt(position).select();
+默认选择position位置的项
