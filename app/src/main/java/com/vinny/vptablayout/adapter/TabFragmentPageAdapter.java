@@ -1,4 +1,4 @@
-package com.vinny.vptablayout;
+package com.vinny.vptablayout.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
